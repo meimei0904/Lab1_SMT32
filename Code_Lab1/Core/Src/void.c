@@ -11,12 +11,20 @@
 //------------------------------hien thuc ham-------------------------------
 void clearP0A()
 {
-	 HAL_GPIO_WritePin(GPIOA, GPIO_PIN_All, GPIO_PIN_RESET);
+	 HAL_GPIO_WritePin(GPIOA, GPIO_PIN_All, GPIO_PIN_SET);
 }
 
 void clearP0B()
 {
 	 HAL_GPIO_WritePin(GPIOB, GPIO_PIN_All, GPIO_PIN_RESET);
+}
+
+void clearSeg()
+{
+	HAL_GPIO_WritePin(SEG_33_GPIO_Port, SEG_33_Pin, SET);
+	HAL_GPIO_WritePin(SEG_44_GPIO_Port, SEG_44_Pin, SET);
+	HAL_GPIO_WritePin(SEG_55_GPIO_Port, SEG_55_Pin, SET);
+	HAL_GPIO_WritePin(SEG_66_GPIO_Port, SEG_66_Pin, SET);
 }
 
 void setLed(int num)

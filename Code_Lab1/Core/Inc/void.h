@@ -10,8 +10,13 @@
 #include "main.h"
 //----------------------------------khai bao ham-------------------------------
 void clearP0A();
+
 void clearP0B();
+
+void clearSeg();
+
 void setLed(int num);
+
 void clearLed(int num);
 
 
