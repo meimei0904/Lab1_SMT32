@@ -91,11 +91,36 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_All, GPIO_PIN_SET);
+  int hour = 9;
+  int min = 0;
+  int sec = 0;
   while (1)
   {
-	  clearNumberOnClock(9);
-	  HAL_Delay(1000);
+	  clearAllClock();
+	  setNumberOnClock(hour);
+	  setNumberOnClock(min);
+	  setNumberOnClock(sec);
+  	  sec++;
+
+  	  if (sec == 12)
+  	  {
+  		  sec = 0;
+  		  min ++;
+  	  }
+
+  	  if (min == 12)
+  	  {
+  		  min = 0;
+  		  hour ++;
+  	  }
+
+  	  if (hour == 12)
+  	  {
+  		  hour = 0;
+  	  }
+
+  	  HAL_Delay(1000);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
