@@ -17,11 +17,10 @@ void clearSegdu();
 
 void setLed(int num);
 
-void setSeg(int num);
-
 void clearLed(int num);
 
-void clearSeg(int led);
+void numSeg1(int num);
+void numSeg2(int num);
 
 
 #endif /* INC_VOID_H_ */

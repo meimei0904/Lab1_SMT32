@@ -105,16 +105,7 @@ int main(void)
 	 	 case 0:
 	 		 if(count == 1)
 	  		 {
-
-	 			 HAL_GPIO_WritePin(SEG_6_GPIO_Port, SEG_6_Pin, SET);
-	 			 HAL_GPIO_WritePin(SEG_0_GPIO_Port, SEG_0_Pin, RESET);
-	 			 HAL_GPIO_WritePin(SEG_1_GPIO_Port, SEG_1_Pin, RESET);
-	 			 HAL_GPIO_WritePin(SEG_2_GPIO_Port, SEG_2_Pin, RESET);
-	 			 HAL_GPIO_WritePin(SEG_3_GPIO_Port, SEG_3_Pin, RESET);
-	 			 HAL_GPIO_WritePin(SEG_4_GPIO_Port, SEG_4_Pin, RESET);
-	 			 HAL_GPIO_WritePin(SEG_5_GPIO_Port, SEG_5_Pin, RESET);
-//	 			 setSeg(6);
-//	 			 clearSeg(0); clearSeg(1); clearSeg(2); clearSeg(3); clearSeg(4); clearSeg(5);
+	 			 numSeg1(0);
 	 			 count = 0;
 	 			 state = 1;
 	  		 }
@@ -123,15 +114,7 @@ int main(void)
 	 	 case 1:
 	 		 if(count == 1)
 	  		 {
-	 			 HAL_GPIO_WritePin(SEG_6_GPIO_Port, SEG_6_Pin, SET);
-	  			 HAL_GPIO_WritePin(SEG_0_GPIO_Port, SEG_0_Pin, SET);
-	  			 HAL_GPIO_WritePin(SEG_1_GPIO_Port, SEG_1_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_2_GPIO_Port, SEG_2_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_3_GPIO_Port, SEG_3_Pin, SET);
-	  			 HAL_GPIO_WritePin(SEG_4_GPIO_Port, SEG_4_Pin, SET);
-	  			 HAL_GPIO_WritePin(SEG_5_GPIO_Port, SEG_5_Pin, SET);
-//	  			 setSeg(6); setSeg(0); setSeg(3); setSeg(4); setSeg(5);
-//	  			 clearSeg(1); clearSeg(2);
+	 			 numSeg1(1);
 	  			 count = 0;
 	  			 state = 2;
 	  		 }
@@ -140,15 +123,7 @@ int main(void)
 	  	 case 2:
 	  		 if(count == 1)
 	  		 {
-	  			 HAL_GPIO_WritePin(SEG_6_GPIO_Port, SEG_6_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_0_GPIO_Port, SEG_0_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_1_GPIO_Port, SEG_1_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_2_GPIO_Port, SEG_2_Pin, SET);
-	  			 HAL_GPIO_WritePin(SEG_3_GPIO_Port, SEG_3_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_4_GPIO_Port, SEG_4_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_5_GPIO_Port, SEG_5_Pin, SET);
-//	  			 setSeg(2); setSeg(5);
-//	  			 clearSeg(6); clearSeg(0); clearSeg(1); clearSeg(3); clearSeg(4);
+	 			 numSeg1(2);
 	  			 count = 0;
 	  			 state = 3;
 	  		 }
@@ -157,15 +132,7 @@ int main(void)
 	  	 case 3:
 	  		 if(count == 1)
 	  		 {
-	  			 HAL_GPIO_WritePin(SEG_6_GPIO_Port, SEG_6_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_0_GPIO_Port, SEG_0_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_1_GPIO_Port, SEG_1_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_2_GPIO_Port, SEG_2_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_3_GPIO_Port, SEG_3_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_4_GPIO_Port, SEG_4_Pin, SET);
-	  			 HAL_GPIO_WritePin(SEG_5_GPIO_Port, SEG_5_Pin, SET);
-//	  			 setSeg(4); setSeg(5);
-//	  			 clearSeg(0); clearSeg(1); clearSeg(2); clearSeg(3); clearSeg(6);
+	 			 numSeg1(3);
 	  			 count = 0;
 	  			 state = 4;
 	  		 }
@@ -174,15 +141,7 @@ int main(void)
 	  	 case 4:
 	  		 if(count == 1)
 	  		 {
-	  			 HAL_GPIO_WritePin(SEG_6_GPIO_Port, SEG_6_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_0_GPIO_Port, SEG_0_Pin, SET);
-	  			 HAL_GPIO_WritePin(SEG_1_GPIO_Port, SEG_1_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_2_GPIO_Port, SEG_2_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_3_GPIO_Port, SEG_3_Pin, SET);
-	  			 HAL_GPIO_WritePin(SEG_4_GPIO_Port, SEG_4_Pin, SET);
-	  			 HAL_GPIO_WritePin(SEG_5_GPIO_Port, SEG_5_Pin, RESET);
-//	  			 setSeg(0); setSeg(3); setSeg(4);
-//	  			 clearSeg(1); clearSeg(2); clearSeg(5); clearSeg(6);
+	 			 numSeg1(4);
 	  			 count = 0;
 	  			 state = 5;
 	  		 }
@@ -191,15 +150,7 @@ int main(void)
 	  	 case 5:
 	  		 if(count == 1)
 	  		 {
-	  			 HAL_GPIO_WritePin(SEG_6_GPIO_Port, SEG_6_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_0_GPIO_Port, SEG_0_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_1_GPIO_Port, SEG_1_Pin, SET);
-	  			 HAL_GPIO_WritePin(SEG_2_GPIO_Port, SEG_2_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_3_GPIO_Port, SEG_3_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_4_GPIO_Port, SEG_4_Pin, SET);
-	  			 HAL_GPIO_WritePin(SEG_5_GPIO_Port, SEG_5_Pin, RESET);
-//	  			 setSeg(1); setSeg(4);
-//	  			 clearSeg(0); clearSeg(2); clearSeg(3); clearSeg(5); clearSeg(6);
+	 			 numSeg1(5);
 	  			 count = 0;
 	  			 state = 6;
 	  		 }
@@ -208,15 +159,7 @@ int main(void)
 	  	 case 6:
 	  		 if(count == 1)
 	  		 {
-	  			 HAL_GPIO_WritePin(SEG_6_GPIO_Port, SEG_6_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_0_GPIO_Port, SEG_0_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_1_GPIO_Port, SEG_1_Pin, SET);
-	  			 HAL_GPIO_WritePin(SEG_2_GPIO_Port, SEG_2_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_3_GPIO_Port, SEG_3_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_4_GPIO_Port, SEG_4_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_5_GPIO_Port, SEG_5_Pin, RESET);
-//	  			 setSeg(1);
-//	  			 clearSeg(0); clearSeg(2); clearSeg(3); clearSeg(4); clearSeg(5); clearSeg(6);
+	 			 numSeg1(6);
 	  			 count = 0;
 	  			 state = 7;
 	  		 }
@@ -225,15 +168,7 @@ int main(void)
 	  	 case 7:
 	  		 if(count == 1)
 	  		 {
-	  			 HAL_GPIO_WritePin(SEG_6_GPIO_Port, SEG_6_Pin, SET);
-	  			 HAL_GPIO_WritePin(SEG_0_GPIO_Port, SEG_0_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_1_GPIO_Port, SEG_1_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_2_GPIO_Port, SEG_2_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_3_GPIO_Port, SEG_3_Pin, SET);
-	  			 HAL_GPIO_WritePin(SEG_4_GPIO_Port, SEG_4_Pin, SET);
-	  			 HAL_GPIO_WritePin(SEG_5_GPIO_Port, SEG_5_Pin, SET);
-//	  			 setSeg(3); setSeg(4); setSeg(5); setSeg(6);
-//	  			 clearSeg(0); clearSeg(1); clearSeg(2);
+	 			 numSeg1(7);
 	  			 count = 0;
 	  			 state = 8;
 	  		 }
@@ -242,14 +177,7 @@ int main(void)
 	  	 case 8:
 	  		 if(count == 1)
 	  		 {
-	  			 HAL_GPIO_WritePin(SEG_6_GPIO_Port, SEG_6_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_0_GPIO_Port, SEG_0_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_1_GPIO_Port, SEG_1_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_2_GPIO_Port, SEG_2_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_3_GPIO_Port, SEG_3_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_4_GPIO_Port, SEG_4_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_5_GPIO_Port, SEG_5_Pin, RESET);
-//	  			 clearSeg(0); clearSeg(1); clearSeg(2); clearSeg(3); clearSeg(4); clearSeg(5); clearSeg(6);
+	 			 numSeg1(8);
 	  			 count = 0;
 	  			 state = 9;
 	  		 }
@@ -258,15 +186,7 @@ int main(void)
 	  	 case 9:
 	  		 if(count == 1)
 	  		 {
-	  			 HAL_GPIO_WritePin(SEG_6_GPIO_Port, SEG_6_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_0_GPIO_Port, SEG_0_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_1_GPIO_Port, SEG_1_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_2_GPIO_Port, SEG_2_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_3_GPIO_Port, SEG_3_Pin, RESET);
-	  			 HAL_GPIO_WritePin(SEG_4_GPIO_Port, SEG_4_Pin, SET);
-	  			 HAL_GPIO_WritePin(SEG_5_GPIO_Port, SEG_5_Pin, RESET);
-//	  			 setSeg(4);
-//	  			 clearSeg(0); clearSeg(1); clearSeg(2); clearSeg(3); clearSeg(5); clearSeg(6);
+	 			 numSeg1(9);
 	  			 count = 0;
 	  			 state = 0;
 	  		 }
