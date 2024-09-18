@@ -9,14 +9,10 @@
 #define SRC_VOID_C_
 #include "void.h"
 //------------------------------hien thuc ham-------------------------------
-void clearP0A()
+
+void clearAllClock()
 {
 	 HAL_GPIO_WritePin(GPIOA, GPIO_PIN_All, GPIO_PIN_RESET);
-}
-
-void clearP0B()
-{
-	 HAL_GPIO_WritePin(GPIOB, GPIO_PIN_All, GPIO_PIN_RESET);
 }
 
 void setLed(int num)

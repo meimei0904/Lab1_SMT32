@@ -19,7 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
+#include "void.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -91,123 +91,10 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  clearP0A();
-  int count = 0;
-  int state = 0;
   while (1)
   {
-	  count ++;
-	  switch(state)
-	  {
-	  	  case 0:
-	      if (count == 1)
-	      {
-	    	  clearLed(11);
-	    	  setLed(0);
-	    	  count = 0;
-	    	  state = 1;
-	      }
-
-	  	  case 1:
-	      if (count == 1)
-	      {
-	    	  clearLed(0);
-	    	  setLed(1);
-	    	  count = 0;
-	    	  state = 2;
-	      }
-
-	  	  case 2:
-	      if (count == 1)
-	      {
-	    	  clearLed(1);
-	    	  setLed(2);
-	    	  count = 0;
-	    	  state = 3;
-	      }
-
-	  	  case 3:
-	      if (count == 1)
-	      {
-	    	  clearLed(2);
-	    	  setLed(3);
-	    	  count = 0;
-	    	  state = 4;
-	      }
-
-	  	  case 4:
-	      if (count == 1)
-	      {
-	    	  clearLed(3);
-	    	  setLed(4);
-	    	  count = 0;
-	    	  state = 5;
-	      }
-
-	  	  case 5:
-	      if (count == 1)
-	      {
-	    	  clearLed(4);
-	    	  setLed(5);
-	    	  count = 0;
-	    	  state = 6;
-	      }
-
-	  	  case 6:
-	      if (count == 1)
-	      {
-	    	  clearLed(5);
-	    	  setLed(6);
-	    	  count = 0;
-	    	  state = 7;
-	      }
-
-	  	  case 7:
-	      if (count == 1)
-	      {
-	    	  clearLed(6);
-	    	  setLed(7);
-	    	  count = 0;
-	    	  state = 8;
-	      }
-
-	  	  case 8:
-	      if (count == 1)
-	      {
-	    	  clearLed(7);
-	    	  setLed(8);
-	    	  count = 0;
-	    	  state = 9;
-	      }
-
-	  	  case 9:
-	      if (count == 1)
-	      {
-	    	  clearLed(8);
-	    	  setLed(9);
-	    	  count = 0;
-	    	  state = 10;
-	      }
-
-	  	  case 10:
-	      if (count == 1)
-	      {
-	    	  clearLed(9);
-	    	  setLed(10);
-	    	  count = 0;
-	    	  state = 11;
-	      }
-
-	  	  case 11:
-	      if (count == 1)
-	      {
-	    	  clearLed(10);
-	    	  setLed(11);
-	    	  count = 0;
-	    	  state = 0;
-	      }
-	  }
-	  HAL_Delay(1000);
+		 clearAllClock();
+		 HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
