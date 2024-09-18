@@ -19,7 +19,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "void.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -48,6 +47,7 @@
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -84,14 +84,130 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
+  MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  clearP0A();
+  int count = 0;
+  int state = 0;
   while (1)
   {
+	  count ++;
+	  switch(state)
+	  {
+	  	  case 0:
+	      if (count == 1)
+	      {
+	    	  clearLed(11);
+	    	  setLed(0);
+	    	  count = 0;
+	    	  state = 1;
+	      }
+
+	  	  case 1:
+	      if (count == 1)
+	      {
+	    	  clearLed(0);
+	    	  setLed(1);
+	    	  count = 0;
+	    	  state = 2;
+	      }
+
+	  	  case 2:
+	      if (count == 1)
+	      {
+	    	  clearLed(1);
+	    	  setLed(2);
+	    	  count = 0;
+	    	  state = 3;
+	      }
+
+	  	  case 3:
+	      if (count == 1)
+	      {
+	    	  clearLed(2);
+	    	  setLed(3);
+	    	  count = 0;
+	    	  state = 4;
+	      }
+
+	  	  case 4:
+	      if (count == 1)
+	      {
+	    	  clearLed(3);
+	    	  setLed(4);
+	    	  count = 0;
+	    	  state = 5;
+	      }
+
+	  	  case 5:
+	      if (count == 1)
+	      {
+	    	  clearLed(4);
+	    	  setLed(5);
+	    	  count = 0;
+	    	  state = 6;
+	      }
+
+	  	  case 6:
+	      if (count == 1)
+	      {
+	    	  clearLed(5);
+	    	  setLed(6);
+	    	  count = 0;
+	    	  state = 7;
+	      }
+
+	  	  case 7:
+	      if (count == 1)
+	      {
+	    	  clearLed(6);
+	    	  setLed(7);
+	    	  count = 0;
+	    	  state = 8;
+	      }
+
+	  	  case 8:
+	      if (count == 1)
+	      {
+	    	  clearLed(7);
+	    	  setLed(8);
+	    	  count = 0;
+	    	  state = 9;
+	      }
+
+	  	  case 9:
+	      if (count == 1)
+	      {
+	    	  clearLed(8);
+	    	  setLed(9);
+	    	  count = 0;
+	    	  state = 10;
+	      }
+
+	  	  case 10:
+	      if (count == 1)
+	      {
+	    	  clearLed(9);
+	    	  setLed(10);
+	    	  count = 0;
+	    	  state = 11;
+	      }
+
+	  	  case 11:
+	      if (count == 1)
+	      {
+	    	  clearLed(10);
+	    	  setLed(11);
+	    	  count = 0;
+	    	  state = 0;
+	      }
+	  }
+	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -132,6 +248,36 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief GPIO Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_GPIO_Init(void)
+{
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+  /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOA_CLK_ENABLE();
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, LED_0_Pin|LED_1_Pin|LED_2_Pin|LED_3_Pin
+                          |LED_4_Pin|LED_5_Pin|LED_6_Pin|LED_7_Pin
+                          |LED_8_Pin|LED_9_Pin|LED_10_Pin|LED_11_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : LED_0_Pin LED_1_Pin LED_2_Pin LED_3_Pin
+                           LED_4_Pin LED_5_Pin LED_6_Pin LED_7_Pin
+                           LED_8_Pin LED_9_Pin LED_10_Pin LED_11_Pin */
+  GPIO_InitStruct.Pin = LED_0_Pin|LED_1_Pin|LED_2_Pin|LED_3_Pin
+                          |LED_4_Pin|LED_5_Pin|LED_6_Pin|LED_7_Pin
+                          |LED_8_Pin|LED_9_Pin|LED_10_Pin|LED_11_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
 }
 
 /* USER CODE BEGIN 4 */

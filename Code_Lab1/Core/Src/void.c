@@ -21,9 +21,9 @@ void clearP0B()
 
 void setLed(int num)
 {
-	if (num == 12)
+	if (num == 0)
 	{
-		HAL_GPIO_WritePin(LED_12_GPIO_Port, LED_12_Pin, SET);
+		HAL_GPIO_WritePin(LED_0_GPIO_Port, LED_0_Pin, SET);
 	}
 	if (num == 1)
 	{
@@ -73,9 +73,9 @@ void setLed(int num)
 
 void clearLed(int num)
 {
-	if (num == 12)
+	if (num == 0)
 	{
-		HAL_GPIO_WritePin(LED_12_GPIO_Port, LED_12_Pin, RESET);
+		HAL_GPIO_WritePin(LED_0_GPIO_Port, LED_0_Pin, RESET);
 	}
 	if (num == 1)
 	{
@@ -122,5 +122,7 @@ void clearLed(int num)
 		HAL_GPIO_WritePin(LED_11_GPIO_Port, LED_11_Pin, RESET);
 	}
 }
+
+
 
 #endif /* SRC_VOID_C_ */
