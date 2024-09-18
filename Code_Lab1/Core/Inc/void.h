@@ -10,7 +10,7 @@
 #include "main.h"
 //----------------------------------khai bao ham-------------------------------
 
-void setLed(int num);
+void setNumberOnClock(int num);
 
 void clearLed(int num);
 

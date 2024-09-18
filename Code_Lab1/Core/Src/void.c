@@ -15,7 +15,7 @@ void clearAllClock()
 	 HAL_GPIO_WritePin(GPIOA, GPIO_PIN_All, GPIO_PIN_RESET);
 }
 
-void setLed(int num)
+void setNumberOnClock(int num)
 {
 	if (num == 0)
 	{

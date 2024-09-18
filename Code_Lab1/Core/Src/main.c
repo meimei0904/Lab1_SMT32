@@ -93,8 +93,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		 clearAllClock();
-		 HAL_Delay(1000);
+	  setNumberOnClock(9);
+	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
