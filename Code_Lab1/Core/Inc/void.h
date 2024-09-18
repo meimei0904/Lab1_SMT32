@@ -13,11 +13,15 @@ void clearP0A();
 
 void clearP0B();
 
-void clearSeg();
+void clearSegdu();
 
 void setLed(int num);
 
+void setSeg(int num);
+
 void clearLed(int num);
+
+void clearSeg(int led);
 
 
 #endif /* INC_VOID_H_ */
