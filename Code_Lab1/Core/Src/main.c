@@ -91,9 +91,10 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_All, GPIO_PIN_SET);
   while (1)
   {
-	  setNumberOnClock(9);
+	  clearNumberOnClock(9);
 	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 

@@ -12,7 +12,7 @@
 
 void setNumberOnClock(int num);
 
-void clearLed(int num);
+void clearNumberOnClock(int num);
 
 void clearAllClock();
 
