@@ -105,7 +105,10 @@ int main(void)
 	 	 case 0:
 	 		 if(count == 1)
 	  		 {
-	 			 numSeg1(0);
+	 			 setLed(3); setLed(9); setLed(4); setLed(10);
+	 			 clearLed(1); clearLed(7); clearLed(5); clearLed(11);
+	 			 numSeg1(5);
+	 			 numSeg2(9);
 	 			 count = 0;
 	 			 state = 1;
 	  		 }
@@ -114,7 +117,9 @@ int main(void)
 	 	 case 1:
 	 		 if(count == 1)
 	  		 {
-	 			 numSeg1(1);
+	 			 setLed(3); setLed(9); setLed(4); setLed(10);
+	 			 numSeg1(4);
+	 			 numSeg2(8);
 	  			 count = 0;
 	  			 state = 2;
 	  		 }
@@ -123,7 +128,8 @@ int main(void)
 	  	 case 2:
 	  		 if(count == 1)
 	  		 {
-	 			 numSeg1(2);
+	 			 numSeg1(3);
+	 			 numSeg2(7);
 	  			 count = 0;
 	  			 state = 3;
 	  		 }
@@ -132,7 +138,8 @@ int main(void)
 	  	 case 3:
 	  		 if(count == 1)
 	  		 {
-	 			 numSeg1(3);
+	 			 numSeg1(2);
+	 			 numSeg2(6);
 	  			 count = 0;
 	  			 state = 4;
 	  		 }
@@ -141,7 +148,8 @@ int main(void)
 	  	 case 4:
 	  		 if(count == 1)
 	  		 {
-	 			 numSeg1(4);
+	 			 numSeg1(1);
+	 			 numSeg2(5);
 	  			 count = 0;
 	  			 state = 5;
 	  		 }
@@ -150,7 +158,8 @@ int main(void)
 	  	 case 5:
 	  		 if(count == 1)
 	  		 {
-	 			 numSeg1(5);
+	 			 numSeg1(0);
+	 			 numSeg2(4);
 	  			 count = 0;
 	  			 state = 6;
 	  		 }
@@ -159,7 +168,10 @@ int main(void)
 	  	 case 6:
 	  		 if(count == 1)
 	  		 {
-	 			 numSeg1(6);
+	  			 setLed(2); setLed(4); setLed(8); setLed(10);
+	  			 clearLed(3); clearLed(9);
+	 			 numSeg1(3);
+	 			 numSeg2(3);
 	  			 count = 0;
 	  			 state = 7;
 	  		 }
@@ -168,7 +180,8 @@ int main(void)
 	  	 case 7:
 	  		 if(count == 1)
 	  		 {
-	 			 numSeg1(7);
+	 			 numSeg1(2);
+	 			 numSeg2(2);
 	  			 count = 0;
 	  			 state = 8;
 	  		 }
@@ -177,7 +190,8 @@ int main(void)
 	  	 case 8:
 	  		 if(count == 1)
 	  		 {
-	 			 numSeg1(8);
+	 			 numSeg1(1);
+	 			 numSeg2(1);
 	  			 count = 0;
 	  			 state = 9;
 	  		 }
@@ -186,7 +200,112 @@ int main(void)
 	  	 case 9:
 	  		 if(count == 1)
 	  		 {
+	 			 numSeg1(0);
+	 			 numSeg2(0);
+	  			 count = 0;
+	  			 state = 10;
+	  		 }
+	     break;
+
+	  	 case 10:
+	  		 if(count == 1)
+	  		 {
+	  			 setLed(1); setLed(7); setLed(6); setLed(12);
+	  			 clearLed(2); clearLed(4); clearLed(8); clearLed(10);
 	 			 numSeg1(9);
+	 			 numSeg2(5);
+	  			 count = 0;
+	  			 state = 11;
+	  		 }
+	     break;
+
+	  	 case 11:
+	  		 if(count == 1)
+	  		 {
+	 			 numSeg1(8);
+	 			 numSeg2(4);
+	  			 count = 0;
+	  			 state = 12;
+	  		 }
+	     break;
+
+	  	 case 12:
+	  		 if(count == 1)
+	  		 {
+	 			 numSeg1(7);
+	 			 numSeg2(3);
+	  			 count = 0;
+	  			 state = 13;
+	  		 }
+	     break;
+
+	  	 case 13:
+	  		 if(count == 1)
+	  		 {
+	 			 numSeg1(6);
+	 			 numSeg2(2);
+	  			 count = 0;
+	  			 state = 14;
+	  		 }
+	     break;
+
+	  	 case 14:
+	  		 if(count == 1)
+	  		 {
+	 			 numSeg1(5);
+	 			 numSeg2(1);
+	  			 count = 0;
+	  			 state = 15;
+	  		 }
+	     break;
+
+	  	 case 15:
+	  		 if(count == 1)
+	  		 {
+	 			 numSeg1(4);
+	 			 numSeg2(0);
+	  			 count = 0;
+	  			 state = 16;
+	  		 }
+	     break;
+
+	  	 case 16:
+	  		 if(count == 1)
+	  		 {
+	  			 setLed(1); setLed(7); setLed(5); setLed(11);
+	  			 clearLed(6); clearLed(12);
+	  			 numSeg1(3);
+	 			 numSeg2(3);
+	  			 count = 0;
+	  			 state = 17;
+	  		 }
+	     break;
+
+	  	 case 17:
+	  		 if(count == 1)
+	  		 {
+	  			 numSeg1(2);
+	 			 numSeg2(2);
+	  			 count = 0;
+	  			 state = 18;
+	  		 }
+	     break;
+
+	  	 case 18:
+	  		 if(count == 1)
+	  		 {
+	  			 numSeg1(1);
+	 			 numSeg2(1);
+	  			 count = 0;
+	  			 state = 19;
+	  		 }
+	     break;
+
+	  	 case 19:
+	  		 if(count == 1)
+	  		 {
+	  			 numSeg1(0);
+	 			 numSeg2(0);
 	  			 count = 0;
 	  			 state = 0;
 	  		 }
